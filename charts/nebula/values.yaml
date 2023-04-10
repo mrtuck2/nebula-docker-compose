@@ -1,5 +1,5 @@
 # Available parameters and default values for the Nebula Graph chart.
-
+#
 image:
   graphd:
     repository: vesoft/nebula-graphd
@@ -16,7 +16,7 @@ image:
 
 storage:
   # The StorageClass to use for StatefulSet storage.
-  storageClass: fast-disks
+  storageClass: standard
   storaged:
     # This defines the disk size for configuring the
     # StatefulSet storage.
@@ -29,33 +29,34 @@ storage:
 resources:
   graphd:
     limits:
-      cpu: 1
-      memory: 1Gi
+      cpu: 500m
+      memory: 512Mi
     requests:
-      cpu: 1
-      memory: 1Gi
+      cpu: 250m
+      memory: 256Mi
   metad:
     limits:
-      cpu: 1
-      memory: 1Gi
+      cpu: 500m
+      memory: 512Mi
     requests:
-      cpu: 1
-      memory: 1Gi
+      cpu: 250m
+      memory: 256Mi
   storaged:
     limits:
-      cpu: 1
-      memory: 1Gi
+      cpu: 500m
+      memory: 512Mi
     requests:
-      cpu: 1
-      memory: 1Gi
+      cpu: 128m
+      memory: 256Mi
+
 
 replication:
   storaged:
-    replicas: 3
+    replicas: 1
   metad:
-    replicas: 3
+    replicas: 1
   graphd:
-    replicas: 2
+    replicas: 1
 
 port:
   graphd:
@@ -80,6 +81,7 @@ commandArgs:
     - "exec /usr/local/nebula/bin/nebula-metad --flagfile=/usr/local/nebula/etc/nebula-metad.conf --daemonize=false"
   storaged:
     - "exec /usr/local/nebula/bin/nebula-storaged --flagfile=/usr/local/nebula/etc/nebula-storaged.conf --daemonize=false"
+
 
 # Time period for the controller pod to do a graceful shutdown
 terminationGracePeriodSeconds: 30
@@ -125,7 +127,8 @@ priorityClassName: ""
 # This value defines `nodeSelector` (https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector)
 # labels for the pod to be scheduled on a node, formatted as a multi-line string.
 nodeSelector:
-  nebula: "cloud"
+  #nebula: "cloud"
+  kubernetes.io/hostname: minikube
 
 # Toleration Settings
 tolerations: []
@@ -137,5 +140,3 @@ affinity: {}
 # Only edit these if you know what you're doing
 nameOverride: ""
 fullnameOverride: ""
-
-

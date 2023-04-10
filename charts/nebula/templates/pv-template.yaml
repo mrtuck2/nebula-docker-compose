@@ -1,0 +1,24 @@
+{{- range $i := until (int $.Values.replication.storaged.replicas) }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: storaged-nebula-storaged-{{ $i }}-pv
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: {{ $.Release.Name }}
+    meta.helm.sh/release-namespace: {{ $.Release.Namespace }}
+spec:
+  capacity:
+    storage: {{ $.Values.storage.storaged.size }}
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: {{ $.Values.storage.storageClass }}
+  hostPath:
+    path: /data/storaged-nebula-storaged-{{ $i }}
+  claimRef:
+    namespace: {{ $.Release.Namespace }}
+    name: storaged-nebula-storaged-{{ $i }}
+{{- end }}
