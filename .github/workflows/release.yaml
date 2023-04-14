@@ -19,8 +19,8 @@ jobs:
           fetch-depth: 0
       - name: custom packaging
         run: |
-        VERSION=${{github.ref_name}}
-        echo "VERSION=${VERSION:1}" >> $GITHUB_ENV
+          VERSION=${{github.ref_name}}
+          echo "VERSION=${VERSION:1}" >> $GITHUB_ENV
           rm -rf .cr-release-packages
           mkdir -p .cr-release-packages
           helm package charts/nebula --app-version=${VERSION:1} --version=${VERSION:1} --destination=.cr-release-packages
