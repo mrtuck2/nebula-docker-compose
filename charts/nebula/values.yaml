@@ -2,16 +2,16 @@
 #
 image:
   graphd:
-    repository: vesoft/nebula-graphd
-    tag: v2.0.0
+    repository: mrtuck1/nebula-graphd
+    tag: latest
     pullPolicy: IfNotPresent
   metad:
-    repository: vesoft/nebula-metad
-    tag: v2.0.0
+    repository: mrtuck1/nebula-metad
+    tag: latest
     pullPolicy: IfNotPresent
   storaged:
-    repository: vesoft/nebula-storaged
-    tag: v2.0.0
+    repository: mrtuck1/nebula-storaged
+    tag: latest
     pullPolicy: IfNotPresent
 
 storage:
