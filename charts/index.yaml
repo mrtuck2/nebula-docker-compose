@@ -24,6 +24,6 @@ entries:
     sources:
     - https://github.com/vesoft-inc/nebula-graph
     urls:
-    - https://vesoft-inc.github.io/nebula-docker-compose/charts/nebula-0.2.0.tgz
+    - https://mrtuck2.github.io/nebula-docker-compose/charts/nebula-0.2.0.tgz
     version: 0.2.0
 generated: "2021-04-15T11:11:45.420157091+08:00"
