@@ -1,5 +1,3 @@
-# Available parameters and default values for the Nebula Graph chart.
-#
 image:
   graphd:
     repository: vesoft/nebula-graphd
@@ -78,10 +76,9 @@ port:
 # nebula metad & storaged container command
 commandArgs:
   metad:
-    - "exec /usr/local/nebula/bin/nebula-metad --flagfile=/usr/local/nebula/etc/nebula-metad.conf --daemonize=false"
+    - "/usr/local/nebula/bin/nebula-metad --flagfile=/usr/local/nebula/etc/nebula-metad.conf --daemonize=false --local_ip=nebula-metad-0.nebula-metad.nebula-studio.svc.cluster.local"
   storaged:
     - "exec /usr/local/nebula/bin/nebula-storaged --flagfile=/usr/local/nebula/etc/nebula-storaged.conf --daemonize=false"
-
 
 # Time period for the controller pod to do a graceful shutdown
 terminationGracePeriodSeconds: 30
@@ -127,7 +124,6 @@ priorityClassName: ""
 # This value defines `nodeSelector` (https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector)
 # labels for the pod to be scheduled on a node, formatted as a multi-line string.
 nodeSelector:
-  #nebula: "cloud"
   kubernetes.io/hostname: minikube
 
 # Toleration Settings
@@ -140,3 +136,5 @@ affinity: {}
 # Only edit these if you know what you're doing
 nameOverride: ""
 fullnameOverride: ""
+
+    
