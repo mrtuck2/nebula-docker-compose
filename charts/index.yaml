@@ -14,12 +14,9 @@ entries:
     - database
     - graph
     maintainers:
-    - email: kevin.qiao@vesoft.com
-      name: kevin
-      url: https://github.com/MegaByte875
-    - email: kenshin.liu@vesoft.com
-      name: kenshin
-      url: https://github.com/kqzh
+    - email: underoath403@gmail.com
+      name: chris
+      url: https://mrtuck2.github.io/
     name: nebula
     sources:
     - https://github.com/mrtuck2/nebula-docker-compose
