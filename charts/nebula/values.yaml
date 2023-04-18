@@ -1,15 +1,15 @@
 image:
   graphd:
     repository: mrtuck1/nebula-graphd
-    tag: tagname
+    tag: latest
     pullPolicy: IfNotPresent
   metad:
     repository: mrtuck1/nebula-metad
-    tag: tagname
+    tag: latest
     pullPolicy: IfNotPresent
   storaged:
     repository: mrtuck1/nebula-storaged
-    tag: tagname
+    tag: latest
     pullPolicy: IfNotPresent
 
 storage:
