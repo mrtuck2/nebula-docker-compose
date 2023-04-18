@@ -14,16 +14,13 @@ entries:
     - database
     - graph
     maintainers:
-    - email: kevin.qiao@vesoft.com
-      name: kevin
+    - email: underoath403@gmail.com
+      name: chris
       url: https://github.com/MegaByte875
-    - email: kenshin.liu@vesoft.com
-      name: kenshin
-      url: https://github.com/kqzh
     name: nebula
     sources:
     - https://github.com/vesoft-inc/nebula-graph
     urls:
-    - https://vesoft-inc.github.io/nebula-docker-compose/charts/nebula-0.2.0.tgz
+    - https://mrtuck2.github.io/nebula-docker-compose//charts/nebula-0.2.0.tgz
     version: 0.2.0
 generated: "2021-04-15T11:11:45.420157091+08:00"
