@@ -17,8 +17,8 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: {{ $.Values.storage.storageClass }}
   hostPath:
-    path: data/storaged-nebula-storaged-{{ $i }}/storaged-nebula-storaged-0
+    path: /data/storaged-nebula-storaged-{{ $i }}
   claimRef: 
     namespace: {{ $.Release.Namespace }}
-    name: storaged-nebula-storaged-{{ $i }}
+    name: storaged-nebula-storaged-{{ $i }}-pvc
 {{- end }}
