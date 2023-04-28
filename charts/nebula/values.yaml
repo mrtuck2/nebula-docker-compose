@@ -75,7 +75,6 @@ port:
 
 # nebula metad & storaged container command
 commandArgs:
-commandArgs:
   metad:
     - "exec /usr/local/nebula/bin/nebula-metad --flagfile=/usr/local/nebula/etc/nebula-metad.conf --daemonize=false"
   storaged:
