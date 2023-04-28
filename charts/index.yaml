@@ -1,29 +1,3 @@
 apiVersion: v1
-entries:
-  nebula:
-  - apiVersion: v1
-    appVersion: v2.0.0
-    created: "2023-04-28T15:40:00.09197-04:00"
-    description: Official Nebula Graph Helm chart for Kubernetes
-    digest: 6db713925a753b76d545b67827fce904b10ac1784a91c25ca29102b4196a5077
-    home: https://nebula-graph.io
-    icon: https://github.com/vesoft-inc/nebula/raw/master/docs/logo.png
-    keywords:
-    - k8s
-    - nebula
-    - database
-    - graph
-    maintainers:
-    - email: kevin.qiao@vesoft.com
-      name: kevin
-      url: https://github.com/MegaByte875
-    - email: kenshin.liu@vesoft.com
-      name: kenshin
-      url: https://github.com/kqzh
-    name: nebula
-    sources:
-    - https://mrtuck2.github.io/nebula-docker-compose/
-    urls:
-    - nebula-0.2.0.tgz
-    version: 0.2.0
-generated: "2023-04-28T15:40:00.087426-04:00"
+entries: {}
+generated: "2023-04-28T15:49:21.519799-04:00"
