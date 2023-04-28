@@ -9,12 +9,4 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: {{ $.Values.storage.storageClass }}
-  persistentVolumeReclaimPolicy: Retain
-  claimRef:
-    namespace: {{ $.Release.Namespace }}
-    name: folder-pvc
   volumeMode: Filesystem
-  dataSource:
-    kind: HostPath
-    apiGroup: ""
-    path: /data/storaged-nebula-storaged-{{ $i }}
