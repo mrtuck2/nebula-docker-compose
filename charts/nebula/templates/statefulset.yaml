@@ -147,21 +147,14 @@ spec:
       {{- end }}
       serviceAccountName: {{ include "nebula.serviceAccountName" . }}
       containers:
-        - name: nebula-storaged
-          image: "{{ .Values.image.storaged.repository }}:{{ .Values.image.storaged.tag }}"
-          imagePullPolicy: {{ .Values.image.storaged.pullPolicy }}
-          command: ["/bin/bash", "-ecx"]
-          args:
-            - "--flagfile=/usr/local/nebula/etc/nebula-storaged.conf"
-            - "--daemonize=false"
-            - "--local_ip=$(POD_IP)"
-          env:
-            - name: USER
-              value: root
-            - name: POD_IP
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.podIP
+      - name: nebula-storaged
+        image: "{{ .Values.image.storaged.repository }}:{{ .Values.image.storaged.tag }}"
+        imagePullPolicy: {{ .Values.image.storaged.pullPolicy }}
+        command: ["/bin/bash", "-ecx"]
+        args: {{ template "nebula.storaged.args" . }}
+        env:
+        - name: USER
+          value: root
         resources:
           requests:
             cpu: {{ .Values.resources.storaged.requests.cpu | quote }}
