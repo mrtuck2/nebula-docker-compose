@@ -25,13 +25,6 @@ spec:
       hostNetwork: true
       {{- end }}
       serviceAccountName: {{ include "nebula.serviceAccountName" . }}
-      initContainers:
-      - name: prepare-data-dir
-        image: busybox
-        command: ['sh', '-c', 'mkdir -p /data/storaged-nebula-storaged-0']
-        volumeMounts:
-        - name: data-storage
-          mountPath: /data
       containers:
         - name: nebula-graphd
           image: "{{ .Values.image.graphd.repository }}:{{ .Values.image.graphd.tag }}"
