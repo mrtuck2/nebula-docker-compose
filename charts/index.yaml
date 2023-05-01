@@ -3,9 +3,9 @@ entries:
   nebula:
   - apiVersion: v1
     appVersion: v2.0.0
-    created: "2023-04-28T15:59:37.540103-04:00"
+    created: "2023-05-01T08:11:29.666871-04:00"
     description: Official Nebula Graph Helm chart for Kubernetes
-    digest: aa344063b0dadc13cc7bd9d08bd774f6b9ee707d59b399ad5488b250eaeae44a
+    digest: 0f94f6cfdfc23a5573f94ac94aaedc09a9a723e46357bfb28c23ed0baf609bc3
     home: https://nebula-graph.io
     icon: https://github.com/vesoft-inc/nebula/raw/master/docs/logo.png
     keywords:
@@ -26,4 +26,4 @@ entries:
     urls:
     - nebula-0.2.0.tgz
     version: 0.2.0
-generated: "2023-04-28T15:59:37.527703-04:00"
+generated: "2023-05-01T08:11:29.665744-04:00"
