@@ -22,7 +22,7 @@ entries:
       url: https://github.com/kqzh
     name: nebula
     sources:
-    - https://mrtuck2.github.io/nebula-docker-compose/
+    - https://mrtuck2.github.io/nebula-docker-compose/charts/
     urls:
     - nebula-0.2.0.tgz
     version: 0.2.0
