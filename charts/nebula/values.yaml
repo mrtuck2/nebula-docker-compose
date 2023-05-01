@@ -108,7 +108,7 @@ disruptionBudget:
 # Controls whether the pod may use the node network namespace.
 # This is required if using a custom CNI where your applications are unable to initiate network connections
 # to the pods outside the k8s cluster, for example using Flannel CNI plugin on K8S.
-hostNetwork: true
+hostNetwork: false
 
 # If 'hostNetwork' set to true, you should specify metadEndpoints with metad replicas properly.
 # Uncomment the following lines, adjust them as necessary, and remove the square brackets after 'metadEndpoints:'.
