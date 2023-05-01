@@ -1,20 +1,21 @@
-{{- range $i := until (int $.Values.replication.storaged.replicas) }}
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: storaged-nebula-storaged-{{ $i }}-pvc
-  labels:
-    app.kubernetes.io/managed-by: Helm
-  annotations:
-    meta.helm.sh/release-name: {{ $.Release.Name }}
-    meta.helm.sh/release-namespace: {{ $.Release.Namespace }}
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
-  storageClassName: {{ $.Values.storage.storageClass }}
-  volumeMode: Filesystem
-{{- end }}
+#{{- range $i := until (int $.Values.replication.storaged.replicas) }}
+#---
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: storaged-nebula-storaged-{{ $i }}-pvc
+#  labels:
+#    app.kubernetes.io/managed-by: Helm
+#  annotations:
+#    meta.helm.sh/release-name: {{ $.Release.Name }}
+#    meta.helm.sh/release-namespace: {{ $.Release.Namespace }}
+#spec:
+#  accessModes:
+#    - ReadWriteOnce
+#  resources:
+#    requests:
+#      storage: 10Gi
+#  storageClassName: {{ $.Values.storage.storageClass }}
+#  volumeMode: Filesystem
+#{{- end }}
+#
