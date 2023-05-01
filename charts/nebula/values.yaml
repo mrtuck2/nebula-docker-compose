@@ -18,9 +18,9 @@ storage:
   storaged:
     # This defines the disk size for configuring the
     # StatefulSet storage.
-    size: 10Gi
+    size: 5Gi
   metad:
-    size: 10Gi
+    size: 5Gi
 
 # The resource requests (CPU, memory, etc.)
 # for each of the nebula components.
