@@ -15,7 +15,9 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
+  {{- if and ($.Values.storage.storageClass) (not (eq $.Values.storage.storageClass "-")) }}
   storageClassName: {{ $.Values.storage.storageClass }}
+  {{- end }}
   hostPath:
     path: /data/storaged-nebula-storaged-{{ $i }}
   claimRef: 
