@@ -195,7 +195,7 @@ spec:
           path: /etc/localtime
       - name: storaged
         persistentVolumeClaim:
-          claimName: storaged
+          claimName: storaged-nebula-storaged-{{ .Values.replication.storaged.replicas }}-pvc
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
