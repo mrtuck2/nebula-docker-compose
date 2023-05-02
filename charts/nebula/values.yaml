@@ -52,9 +52,9 @@ replication:
   storaged:
     replicas: 1
   metad:
-    replicas: 1
+    replicas: 2
   graphd:
-    replicas: 1
+    replicas: 2
 
 port:
   graphd:
