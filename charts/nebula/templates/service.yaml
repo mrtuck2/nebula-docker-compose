@@ -47,6 +47,7 @@ metadata:
   name: nebula-graphd
 spec:
   publishNotReadyAddresses: false
+  clusterIP: {{ .Values.graphdClusterIP }}   # Replace with the actual ClusterIP of the graphd service
   type: NodePort
   ports:
     - name: thrift

@@ -12,6 +12,8 @@ image:
     tag: latest
     pullPolicy: IfNotPresent
 
+graphdClusterIP: 10.0.0.1
+
 storage:
   # The StorageClass to use for StatefulSet storage.
   storageClass: standard
