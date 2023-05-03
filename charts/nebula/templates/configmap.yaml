@@ -40,7 +40,7 @@ data:
     # Backlog of the listen socket, adjust this together with net.core.somaxconn
     --listen_backlog=1024
     # Seconds before the idle connections are closed, 0 for never closed
-    --client_idle_timeout_secs=0
+    --client_idle_timeout_secs=60
     # Seconds before the idle sessions are expired, 0 for no expiration
     --session_idle_timeout_secs=60000
     # The number of threads to accept incoming connections
