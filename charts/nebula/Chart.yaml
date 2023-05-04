@@ -17,5 +17,5 @@ maintainers:
     url: https://github.com/kqzh
 name: nebula
 sources:
-  - https://mrtuck2.github.io/nebula-docker-compose/
+  - https://github.com/vesoft-inc/nebula-graph
 version: 0.2.0
