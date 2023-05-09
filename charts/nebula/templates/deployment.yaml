@@ -10,18 +10,6 @@ spec:
     matchLabels:
       app.kubernetes.io/component: nebula-graphd
   replicas: {{ .Values.replication.graphd.replicas }}
-  strategy:apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app.kubernetes.io: nebula
-    app.kubernetes.io/component: nebula-graphd
-  name: nebula-graphd
-spec:
-  selector:
-    matchLabels:
-      app.kubernetes.io/component: nebula-graphd
-  replicas: {{ .Values.replication.graphd.replicas }}
   strategy:
     rollingUpdate:
       maxSurge: 1
